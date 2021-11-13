@@ -86,28 +86,81 @@ char Board::GetPlayer() const
 	}						   
 }							   
 							   
-bool Board::CheckForWin()
+int Board::CheckForWin()
 {	
 	//Rows
 	if (board[0] == board[1] && board[2] == board[0] && board[0] != empty ||
 		board[3] == board[4] && board[5] == board[3] && board[3] != empty ||
 		board[6] == board[7] && board[8] == board[6] && board[6] != empty)
 	{
-		return true;
+		if (playingBot && player == 1)
+		{
+			return 4;
+		}
+		else if (player == 1)
+		{
+			return 1;
+		}
+		else if (player == 2)
+		{
+			return 2;
+		}
 	}
 	//Columns
 	if (board[0] == board[3] && board[6] == board[0] && board[0] != empty ||
 		board[1] == board[4] && board[7] == board[1] && board[1] != empty ||
 		board[2] == board[5] && board[8] == board[2] && board[2] != empty)
 	{
-		return true;
+		if (playingBot && player == 1)
+		{
+			return 4;
+		}
+		else if (player == 1)
+		{
+			return 1;
+		}
+		else if (player == 2)
+		{
+			return 2;
+		}
 	}
 	//diagonals
 	if (board[6] == board[4] && board[2] == board[6] && board[6] != empty ||
 		board[0] == board[4] && board[8] == board[0] && board[0] != empty)
 	{
-		return true;
+		if (playingBot && player == 1)
+		{
+			return 4;
+		}
+		else if (player == 1)
+		{
+			return 1;
+		}
+		else if (player == 2)
+		{
+			return 2;
+		}
+	}
+	for (int i = 0; i < 9; i++)
+	{
+		if (board[i] == empty)
+		{
+			return 0;
+		}
+		if (i == 8)
+		{
+			return 3;
+		}
 	}
 
-	return false;
+	return 0;
+}
+
+void Board::Reset()
+{
+	for (int i = 0; i < 9; i++)
+	{
+		board[i] = empty;
+	}
+	player = 1;
 }

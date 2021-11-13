@@ -9,7 +9,8 @@ public:
 	void SetBot(bool f_playingBot);
 	void PrintBoard() const;
 	char GetPlayer() const;
-	bool CheckForWin();
+	int CheckForWin();
+	void Reset();
 private:
 	bool playingBot;
 	char player;
