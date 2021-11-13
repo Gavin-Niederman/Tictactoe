@@ -5,10 +5,11 @@ class Board
 {
 public:
 	Board();
-	void SetTile(char input);
-	void PrintBoard() const;
+	void SetTile(char input);	
 	void SetBot(bool f_playingBot);
+	void PrintBoard() const;
 	char GetPlayer() const;
+	bool CheckForWin();
 private:
 	bool playingBot;
 	char player;

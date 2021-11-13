@@ -74,14 +74,40 @@ char Board::GetPlayer() const
 {
 	if (player == 1)
 	{
-		return 'X';
-	}
-	else if (player == 2)
+		return 'X';			   
+	}						   
+	else if (player == 2)	   
+	{						   
+		return 'O';			   
+	}						   
+	else					   
+	{						   
+		return 'B';			   
+	}						   
+}							   
+							   
+bool Board::CheckForWin()
+{	
+	//Rows
+	if (board[0] == board[1] && board[2] == board[0] && board[0] != empty ||
+		board[3] == board[4] && board[5] == board[3] && board[3] != empty ||
+		board[6] == board[7] && board[8] == board[6] && board[6] != empty)
 	{
-		return 'O';
+		return true;
 	}
-	else
+	//Columns
+	if (board[0] == board[3] && board[6] == board[0] && board[0] != empty ||
+		board[1] == board[4] && board[7] == board[1] && board[1] != empty ||
+		board[2] == board[5] && board[8] == board[2] && board[2] != empty)
 	{
-		return 'B';
+		return true;
 	}
+	//diagonals
+	if (board[6] == board[4] && board[2] == board[6] && board[6] != empty ||
+		board[0] == board[4] && board[8] == board[0] && board[0] != empty)
+	{
+		return true;
+	}
+
+	return false;
 }
