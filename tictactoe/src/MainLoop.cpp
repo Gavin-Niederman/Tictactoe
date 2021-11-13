@@ -7,7 +7,7 @@ Board board;
 
 void MainLoop()
 {
-	board.SetBot(true);
+	board.SetBot(false);
 	while (true)
 	{
 		board.PrintBoard();	
