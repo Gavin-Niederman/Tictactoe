@@ -10,8 +10,9 @@ public:
 
 	void PrintBoard();
 
+	void SetBot(bool f_playingBot);
+
 private:
 	bool playingBot;
 	Tile board[9];
-	int test;
 };

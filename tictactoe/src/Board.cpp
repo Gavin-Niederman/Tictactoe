@@ -2,7 +2,7 @@
 #include "Board.hpp"
 #include <iostream>
 
-	Board::Board() : board{ empty, empty, empty, empty, empty, empty, empty, empty, empty }, test(5)
+	Board::Board() : board{ empty, empty, empty, empty, empty, empty, empty, empty, empty }
 	{
 	}
 
@@ -25,4 +25,9 @@
 		}
 
 		std::cout << std::endl << "-------------";
+	}
+
+	void Board::SetBot(bool f_playingBot)
+	{
+		playingBot = f_playingBot;
 	}

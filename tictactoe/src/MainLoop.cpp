@@ -5,6 +5,7 @@ Board board;
 
 void MainLoop()
 {
+	board.SetBot(true);
 	while (true)
 	{
 		board.SetTile();
