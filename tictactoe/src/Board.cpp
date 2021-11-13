@@ -1,5 +1,5 @@
-#include "Tile.h"
-#include "Board.h"
+#include "Tile.hpp"
+#include "Board.hpp"
 #include <iostream>
 
 	Board::Board() : board{ empty, empty, empty, empty, empty, empty, empty, empty, empty }, test(5)

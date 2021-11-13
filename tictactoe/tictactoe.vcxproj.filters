@@ -26,10 +26,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Tile.h">
+    <ClInclude Include="src\Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Board.h">
+    <ClInclude Include="src\Board.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
