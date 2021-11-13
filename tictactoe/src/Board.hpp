@@ -6,9 +6,9 @@ class Board
 public:
 	Board();
 	void SetTile(char input);
-	void PrintBoard();
+	void PrintBoard() const;
 	void SetBot(bool f_playingBot);
-	char GetPlayer();
+	char GetPlayer() const;
 private:
 	bool playingBot;
 	char player;

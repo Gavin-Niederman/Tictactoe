@@ -10,15 +10,46 @@ void Board::SetTile(char input)
 {
 	if (input < 49 || input > 58)
 	{
-		std::cout << "Invalid input!";
+		std::cout << "Invalid input!" << std::endl;
+	}
+	else if (board[input - 49] != empty)
+	{
+		std::cout << "Invalid input! You selected a filled in tile!" << std::endl;		
 	}
 	else
 	{
-		board[input - 49] = x;
+		if (player == 1)
+		{
+			board[input - 49] = x;
+		}
+		else
+		{
+			board[input - 49] = o;
+		}
+
+		if (player == 1)
+		{
+			if (playingBot == true)
+			{
+				player = 3;
+			}
+			else
+			{
+				player = 2;
+			}
+		}
+		else if (player == 2)
+		{
+			player = 1;
+		}
+		else
+		{
+			player = 1;
+		}
 	}
 }
 
-void Board::PrintBoard()
+void Board::PrintBoard() const
 {
 	std::cout << "-------------" << std::endl << '|';
 
@@ -39,7 +70,7 @@ void Board::SetBot(bool f_playingBot)
 	playingBot = f_playingBot;
 }
 
-char Board::GetPlayer()
+char Board::GetPlayer() const
 {
 	if (player == 1)
 	{
@@ -51,6 +82,6 @@ char Board::GetPlayer()
 	}
 	else
 	{
-		return 'Bot';
+		return 'B';
 	}
 }
