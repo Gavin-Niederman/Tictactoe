@@ -1,5 +1,5 @@
 # A simple console-based tictactoe game.
-#### Currently in an early stage but will include a minimax algorithm later.
+#### Working on adding MiniMax.
 ---
 ## Progress
 
