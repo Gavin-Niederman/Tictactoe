@@ -1,5 +1,5 @@
 # A simple console-based tictactoe game.
-#### Working on adding MiniMax.
+#### I have stopped working on this as I have lost all motivation. It is possible that I will start to work on it again later.
 ---
 ## Progress
 
